@@ -1,0 +1,26 @@
+// LINK TO LANGCHAIN V2.0 DOCUMENTATION 
+https://python.langchain.com/v0.2/docs/introduction/
+
+
+
+// DIFF B/W CHAT MODEL AND LLM N LANGCHAIN
+Chat models are often backed by LLMs but tuned specifically for having conversations. Crucially, their provider APIs use a different interface than pure text completion models. Instead of a single string, they take a list of chat messages as input and they return an AI message as output. See the section below for more details on what exactly a message consists of. GPT-4 and Anthropic's Claude-2 are both implemented as chat models.
+
+LLMs in LangChain refer to pure text completion models. The APIs they wrap take a string prompt as input and output a string completion. OpenAI's GPT-3 is implemented as an LLM.
+
+
+// TYPES OF MESSAGES IN LANG CHAIN
+HumanMessage
+This represents a message from the user. Generally consists only of content.
+
+AIMessage
+This represents a message from the model.
+
+SystemMessage
+This represents a system message, which tells the model how to behave. This generally only consists of content. Not every model supports this.
+
+FunctionMessage
+This represents the result of a function call. In addition to role and content, this message has a name parameter which conveys the name of the function that was called to produce this result.
+
+ToolMessage
+This represents the result of a tool call. This is distinct from a FunctionMessage in order to match OpenAI's function and tool message types. In addition to role and content, this message has a tool_call_id parameter which conveys the id of the call to the tool that was called to produce this result.
