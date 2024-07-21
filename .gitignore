@@ -2,3 +2,41 @@
 env/
 flagged/
 **/__pycache__/
+
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+nextjs_chatbot/node_modules
+nextjs_chatbot/.pnp
+nextjs_chatbot.pnp.js
+nextjs_chatbot.yarn/install-state.gz
+
+# testing
+nextjs_chatbot/coverage
+
+# next.js
+nextjs_chatbot/.next/
+nextjs_chatbot/out/
+
+# production
+nextjs_chatbot/build
+
+# misc
+nextjs_chatbot/.DS_Store
+nextjs_chatbot/*.pem
+
+# debug
+nextjs_chatbot/npm-debug.log*
+nextjs_chatbot/yarn-debug.log*
+nextjs_chatbot/yarn-error.log*
+
+# local env files
+nextjs_chatbot/.env*.local
+
+# vercel
+nextjs_chatbot/.vercel
+
+# typescript
+nextjs_chatbot/*.tsbuildinfo
+nextjs_chatbot/next-env.d.ts
