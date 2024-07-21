@@ -1,2 +1,4 @@
 .env
 env/
+flagged/
+**/__pycache__/
